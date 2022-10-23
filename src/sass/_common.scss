@@ -1,1 +1,38 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+/**
+  |============================
+  | 2C2C2C
+  000000 menu
+
+   Dark green 
+
+  color: #7EB101;
+  Yellow main 
+
+  background: #FFE550;
+  |============================
+*/
+:root {
+  --swiper-navigation-size: 40px;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+.img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
