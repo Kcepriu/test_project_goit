@@ -1,0 +1,13 @@
+.header-offerings {
+  @include container();
+
+  // margin-left: auto;
+  // margin-right: auto;
+
+
+  // background-color:s yellow;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  background-image: url('../images/background/hero-desk.png');
+}

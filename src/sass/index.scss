@@ -1,3 +1,11 @@
-@import './common';
-@import './example';
-@import './header'
+@import './utils/common';
+@import './utils/variables';
+@import './utils/media_query';
+@import './utils/container';
+@import './utils/section';
+
+@import './components/hero';
+@import './components/hero-slider';
+@import './components/offerings';
+@import './components/favorites';
+@import './components/background_section';
