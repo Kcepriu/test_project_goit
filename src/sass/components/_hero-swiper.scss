@@ -1,4 +1,16 @@
-.slider__wrap {
+/**
+  |============================
+  | 
+  |============================
+*/
+
+.hero__wrap-section {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.swiper__wrap {
   display: none;
   position: relative;
 
@@ -7,24 +19,24 @@
 
   @include mq(tab) {
     display: flex;
+    max-width: 320px;
     width: 320px;
-    height: 320px;
     margin-right: 8px;
   }
 
   @include mq(desk) {
+    max-width: 580px;
     width: 580px;
-    height: 580px;
     margin-right: 14px;
   }
 }
 
-.slider {
+
+.swiper {
   width: 100%;
   position: relative;
+  display: block;
   padding: 5px;
-
-  overflow: hidden;
 
   border-radius: 50%;
 
@@ -37,34 +49,28 @@
   }
 }
 
-
-.slider__img {
+.hero__img {
   @include img();
   width: 100%;
   user-select: none;
 }
 
-/* Слайдер */
-.slick-slider {
-  min-width: 0;
-}
-
-.slick-list {
+.swiper-slide-visible {
   overflow: hidden;
 }
 
-/* Лента слайдов */
-.slick-track {
-  display: flex;
-  align-items: flex-start;
-}
+
+// .swiper-slide {
+//   min-width: 0;
+//   overflow: hidden;
+// }
 
 /**
   |============================
   | Button
   |============================
 */
-@mixin slider-button() {
+@mixin swiper-button() {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,9 +82,15 @@
 
   color: #2c2c2c;
 
-  background-color: #ffffff;
+  background: #ffffff;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
+
+  @include mq(desk) {
+    width: 48px;
+    height: 40px;
+  }
 
   &:hover {
     color: #7eb101;
@@ -89,14 +101,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   }
 
-  @include mq(desk) {
-    width: 48px;
-    height: 40px;
-  }
 }
 
-.slider__button--prev {
-  @include slider-button();
+.swiper__button--prev {
+  @include swiper-button();
   left: -8px;
 
   @include mq(desk) {
@@ -104,8 +112,8 @@
   }
 }
 
-.slider__button--next {
-  @include slider-button();
+.swiper__button--next {
+  @include swiper-button();
   right: -8px;
 
   @include mq(desk) {
@@ -113,7 +121,7 @@
   }
 }
 
-.slider__button--img {
+.swiper__button--img {
   fill: currentColor;
   width: 11px;
 

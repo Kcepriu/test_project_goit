@@ -1,0 +1,94 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 50;
+
+  // transition: opacity 500ms $timing-function-primary,
+  //   visibility 500ms $timing-function-primary;
+}
+
+.backdrop.is-hidden {
+  visibility: collapse;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-window {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  max-width: 450px;
+  max-height: 609px;
+
+  width: 100%;
+
+  padding: 40px;
+
+  background-color: white;
+  // background: getColor('white-primary');
+
+  // box-shadow: #{getShadow('shadow-modal-windows')};
+  border-radius: 4px;
+
+  // transition: transform $duration-primary $timing-function-primary;
+
+  @include mq(mob-min) {
+    padding: 20px;
+  }
+
+  @include mq(desk) {
+    max-width: 528px;
+    max-height: 581px;
+  }
+
+  @media screen and (max-height: 560px) {
+    padding: 20px;
+  }
+}
+
+.modal-window__btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  color: #000000;
+  background-color: inherit;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  // transition: color $duration-primary $timing-function-primary;
+
+  &:hover,
+  &:focus {
+    // color: getColor('accent');
+    cursor: pointer;
+  }
+}
+
+.modal-window__icon-close {
+  width: 11px;
+  height: 11px;
+
+  fill: currentColor;
+}

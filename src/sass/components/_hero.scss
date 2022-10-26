@@ -6,8 +6,12 @@
 .hero__container {
   // @include container();
 
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+}
+
+.hero__wrap-section:not(:first-child) {
+  margin-top: 100px;
 }
 
 .hero__wrap--left {
@@ -43,3 +47,7 @@
 
   color: #2c2c2c;
 }
+
+// .hero__wrap-section.section1 {
+//   display: none;
+// }
