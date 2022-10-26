@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enjoy Your Favorite Food From Anywhere</title>
 
-    <link rel="stylesheet" href="./sass/index.scss" />
-
-    <script type="module" src="./index.js"></script>
-
     <!--Link Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,72 +23,32 @@
     />
 
     <!--Link Swiper -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    /> -->
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="hero">
-      <div class="hero__container">
-        <div class="hero__wrap--left">
-          <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
-          <p class="hero__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat.
-          </p>
-          <button class="hero__btn" type="button">Order Now</button>
-        </div>
-
-        <div class="hero__wrap--rigth">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <div class="hero__swiper swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img
-                  class="img hero__img"
-                  src="./images/swiper-1.png"
-                  alt="sauce in a plate"
-                  width="528"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="img hero__img"
-                  src="./images/swiper-2.png"
-                  alt="salt"
-                  width="528"
-                />
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  class="img hero__img"
-                  src="./images/swiper-3.png"
-                  alt="food"
-                  width="528"
-                />
-              </div>
-              ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
-          </div>
-          <!-- If we need navigation buttons -->
-        </div>
-      </div>
+    <div class="header-offerings">
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/offerings.html"></include>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+    <include src="./partials/favorites.html"></include>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <!-- <script src="./js/swiper.js"></script> -->
+
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Подключаем слайдер Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/slick.js"></script>
   </body>
 </html>
